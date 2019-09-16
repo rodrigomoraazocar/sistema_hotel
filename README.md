@@ -24,9 +24,9 @@ Observação: este comando deve ser executado onde esteja alocado o arquivo info
 
 Projeto foi utilizado:
 
-Javascript
-Jquery    3.4.1
-Bootstrap 4.3.1
-Nodejs v10.16.0
-npm 6.9.0
+Javascript,
+Jquery    3.4.1,
+Bootstrap 4.3.1,
+Nodejs v10.16.0,
+npm 6.9.0,
 json-server 0.15.1
