@@ -4,11 +4,11 @@ Desafio Senior
 Para simular o Api Rest, estou utilizando o Json server.
 
 Referencias:  
-https://www.npmjs.com/package/json-server
-https://medium.com/codingthesmartway-com-blog/create-a-rest-api-with-json-server-36da8680136d
-https://nodejs.org/en/download/
-https://getbootstrap.com/
-https://jquery.com/download/
+https://www.npmjs.com/package/json-server,
+https://medium.com/codingthesmartway-com-blog/create-a-rest-api-with-json-server-36da8680136d,
+https://nodejs.org/en/download/,
+https://getbootstrap.com/,
+https://jquery.com/download/,
 
 
 Passo 1 : Instalando o Nodejs para obter o npm 
