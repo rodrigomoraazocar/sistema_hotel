@@ -1,0 +1,83 @@
+{
+  "objPessoa": [
+    {
+      "id": 1,
+      "nome": "joão",
+      "documento": 123456789,
+      "telefone": "333666558"
+    },
+    {
+      "id": 2,
+      "nome": "maria",
+      "documento": 456789123,
+      "telefone": "456622157"
+    },
+    {
+      "id": 3,
+      "nome": "pedro",
+      "documento": 789456123,
+      "telefone": "4566254876"
+    },
+    {
+      "nome": "rodrigo",
+      "documento": 159988999,
+      "telefone": "99993333",
+      "id": 4
+    },
+    {
+      "nome": "Adriana",
+      "documento": "999997777",
+      "telefone": "222266666",
+      "id": 5
+    },
+    {
+      "nome": "Ana",
+      "documento": "999997744",
+      "telefone": "222266226",
+      "id": 6
+    },
+    {
+      "nome": "Alice",
+      "documento": "999977774",
+      "telefone": "333335554",
+      "id": 7
+    }
+  ],
+  "checkin": [
+    {
+      "id": 1,
+      "dataEntrada": "2018-03-14T08:00:00",
+      "dataSaida": "",
+      "adicionalVeiculo": true,
+      "pessoaId": 4
+    },
+    {
+      "id": 2,
+      "dataEntrada": "2018-04-15T08:00:00",
+      "dataSaida": "2018-04-16T10:17:00",
+      "adicionalVeiculo": false,
+      "pessoaId": 1
+    },
+    {
+      "id": 3,
+      "dataEntrada": "2018-06-25T08:00:00",
+      "dataSaida": "2018-06-28T10:17:00",
+      "adicionalVeiculo": true,
+      "pessoaId": 2
+    },
+    {
+      "id": 4,
+      "dataEntrada": "2018-06-25T08:00:00",
+      "dataSaida": "",
+      "adicionalVeiculo": false,
+      "pessoaId": 3
+    },
+    {
+      "dataEntrada": "2019-09-15T15:00:00",
+      "dataSaida": "",
+      "adicionalVeiculo": false,
+      "pessoaId": 5,
+      "id": 5
+    }
+  ]
+}

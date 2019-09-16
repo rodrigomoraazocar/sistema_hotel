@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">    
+    <title>Sistema Hotel</title>
+</head>
+<body>    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script> 
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>      
+    <script type="text/javascript" src="js/scripts.js"></script>      
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <img src="imagens\logo-senior.png" class="rounded float-left">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>                        
+    </nav>
+
+    <div class="container">         
+        <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#pessoasModal">Incluir Pessoas</button> 
+
+        <div class="position-static">
+            <div class="border border-primary rounded-lg mt-2">
+                <header class="alert bg-primary text-white p-2">Novo check in</header>            
+                <form class="p-2">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputDataHoraEntrada">Data/hora de entrada</label>
+                            <input type="text" class="form-control date_time" id="inputDataHoraEntrada">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputDataHoraSaida">Data/hora de saída</label>
+                            <input type="text" class="form-control date_time" id="inputDataHoraSaida">
+                        </div>
+                    </div>  
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputPessoa">Pessoa</label>
+                            <input type="text" class="form-control" id="inputPessoa">
+                        </div>
+                        <div class="form-group col-md-6 p-4 mt-3">
+                            <div class="form-check">
+                                <input class="form-check-input big-checkbox" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Possui Veículo
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="ConsultarPessoa()">Salvar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="position-static">
+            <div class="border border-primary rounded-lg mt-2">
+                <header class="alert bg-primary text-white p-2">Consultas</header>
+            
+                <form class="p-2">
+                    <input type="hidden" id="pagina" value="">
+                    <div class="form-row">
+                        <div class="ml-2">
+                            <label for="labelFiltrar">Filtrar por: </label>                            
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group ml-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input big-radio" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Pessoas ainda presentes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input big-radio" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Pessoas que já deixaram o hotel</label>
+                        </div>                        
+                        </div>
+                    </div>  
+                    
+                    <table class="table mt-3">                        
+                        <thead>
+                          <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Documento</th>
+                            <th scope="col">Valor gasto (R$)</th>                            
+                          </tr>
+                        </thead>
+                        <tbody id="listagem">                          
+                        </tbody>
+                    </table>
+                    
+                    <div class="pager">
+                        <button class="btn btn-default btn-round mr-2" onclick="Anterior()"><img src="imagens\seta-esquerda.png" class="img-seta">Previous</button>
+                        <button class="btn btn-default btn-round" onclick="Proximo()">Next<img src="imagens\seta-direita.png" class="img-seta"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="pessoasModal" tabindex="-1" role="dialog" aria-labelledby="pessoasModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">                
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pessoasModalLabel">Cadastro de Pessoas</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="inputNome">Nome</label>
+                                <input type="text" class="form-control" id="inputNome">
+                            </div>                            
+                        </div>  
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputDocumento">Documento</label>
+                                <input type="text" class="form-control" id="inputDocumento">
+                            </div>
+                            <div class="form-group col-md-6"> 
+                                <label for="inputTelefone">Telefone</label>
+                                <input type="text" class="form-control" id="inputTelefone">                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary" id="botSalvarPessoa" onclick="SalvarPessoa()">Salvar</button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.big-checkbox {
+	width: 16px; 
+	height: 16px;
+}
+
+.big-radio {
+	width: 15px; 
+	height: 15px;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-round {
+    border-radius: 20px;
+}
+
+.img-seta {
+	width: 10px; 
+	height: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.alert{
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;	
+}
+
