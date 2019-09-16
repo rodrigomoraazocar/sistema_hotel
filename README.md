@@ -19,7 +19,7 @@ npm install -g json-server
 Passo 3 : Para executar o json server 
 json-server --watch info.json    
 
-Observação: este comando deve ser executado onde esteja alocado o arquivo info.json para que funcione corretamente.
+Observação: este comando deve ser executado onde esteja alocado o arquivo info.json ( pasta do projeto) para que funcione corretamente.
 
 
 Projeto foi utilizado:
